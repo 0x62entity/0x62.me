@@ -17,6 +17,6 @@ function command() {
   let cmd = box.value;
   let ret = parse(cmd);
   document.getElementById("term-output").innerText += "visitor@0x62.me ~ $ " + cmd + "\n";
-  document.getElementById("term-output").innerHTML += (ret + "<br/>");
+  document.getElementById("term-output").innerText += (ret + "<br/>");
   box.value = "";
 }
