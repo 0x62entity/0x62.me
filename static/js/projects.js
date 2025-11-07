@@ -21,8 +21,8 @@ function createDiv(project) {
     <h3>${project.name}</h3>
     <p>${project.description}</p>
     <div>
-      <a href="${project.github}">GitHub</a>
-      <a href="${project.demo}">Demo</a>
+      <a class="text-green" href="${project.github}">GitHub</a>
+      <a class="text-green" href="${project.demo}">Demo</a>
     </div>
   `
   return sect;
