@@ -2,19 +2,17 @@ function parse(command) {
   switch(command[0]) {
     case "help":
     case "?":
-      return "Available commands: help ? ls about projects";
-    case "ls":
-      return "about.html about-de.html about-zh.html index.html projects.html";
+      return "Available commands: help ? about projects contact";
     case "about":
       if (command.length > 1) {
         switch(command[1]) {
           case 'zh':
           case '中文':
-            location.href = `about-zh.html`;
+            location.href = `zh/about.html`;
             break;
           case 'de':
           case 'deutsch':
-            location.href = 'about-de.html';
+            location.href = 'de/about.html';
             break;
           case 'en':
           case 'english':
@@ -34,11 +32,11 @@ function parse(command) {
         switch(command[1]) {
           case 'zh':
           case '中文':
-            location.href = `contact-zh.html`;
+            location.href = `zh/contact.html`;
             break;
           case 'de':
           case 'deutsch':
-            location.href = 'contact-de.html';
+            location.href = 'de/contact.html';
             break;
           case 'en':
           case 'english':
