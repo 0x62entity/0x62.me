@@ -29,7 +29,25 @@ function parse(command) {
       else location.href = 'about.html';
       break;
     case "projects":
-      location.href = 'projects.html';
+      if (command.length > 1) {
+        switch(command[1]) {
+          case 'zh':
+          case '中文':
+            location.href = `zh/projects.html`;
+            break;
+          case 'de':
+          case 'deutsch':
+            location.href = 'de/projects.html';
+            break;
+          case 'en':
+          case 'english':
+            location.href = 'projects.html';
+            break;
+          default:
+            return "parameter 1 invalid";
+        }
+      }
+      else location.href = 'projects.html';
       break;
     case "contact":
       if (command.length > 1) {
