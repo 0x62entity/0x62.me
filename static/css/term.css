@@ -21,3 +21,12 @@ input:focus {
   border: none;
   outline: none;
 }
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
