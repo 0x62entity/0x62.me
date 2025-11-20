@@ -71,7 +71,7 @@ function parse(command) {
       else location.href = 'contact.html';
       break;
     default:
-      return "Command does not exist."
+      return '<span class="text-red">Command not found</span>'
   }
 }
 

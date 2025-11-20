@@ -12,6 +12,10 @@ body {
   color: yellow;
 }
 
+.text-red {
+  color: coral;
+}
+
 .project-card {
   background-color: #444;
   padding: 4px;
