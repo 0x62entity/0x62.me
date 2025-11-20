@@ -23,7 +23,7 @@ function parse(command) {
             location.href = 'about.html';
             break;
           default:
-            return "parameter 1 invalid";
+            return '<span class="text-red">parameter 1 invalid</span>';
         }
       }
       else location.href = 'about.html';
@@ -44,7 +44,7 @@ function parse(command) {
             location.href = 'projects.html';
             break;
           default:
-            return "parameter 1 invalid";
+            return '<span class="text-red">parameter 1 invalid</span>';
         }
       }
       else location.href = 'projects.html';
@@ -65,7 +65,7 @@ function parse(command) {
             location.href = 'contact.html';
             break;
           default:
-            return "parameter 1 invalid";
+            return '<span class="text-red">parameter 1 invalid</span>';
         }
       }
       else location.href = 'contact.html';
