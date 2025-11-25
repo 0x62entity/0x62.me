@@ -47,7 +47,12 @@ async function command() {
   let box = document.getElementById("cmd-input");
   let cmd = box.value;
   box.value = "";
+  box.setAttribute('disabled', 'true');
+  document.getElementById('term-input').style.visibility = 'hidden';
   addText('visitor@0x62.me: <span class="text-green">~</span> $ ' + cmd + "<br/>");
   let ret = await parse(cmd.split(' '));
   addText((ret + "\n") + "<br/>");
+  document.getElementById('term-input').style.visibility = 'visible';
+  box.removeAttribute('disabled');
+  box.click();
 }
