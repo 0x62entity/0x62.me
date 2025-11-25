@@ -30,6 +30,10 @@ async function parse(command) {
       return import('./commands/curl.js').then(async curl => {
         return (await curl.curl(command[1])).trim();
       });
+    case "echo":
+      let text = command;
+      text[0] = '';
+      return text.join(' ');
     default:
       return '<span class="text-red">Command not found</span>';
   }
