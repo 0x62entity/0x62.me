@@ -3,5 +3,5 @@ export async function curl(url) {
   if (!res.ok) {
     return `<span class="text-red">${res.statusText}</span>`
   }
-  return `<pre>${await res.text()}</pre>`;
+  return `<pre>${(await res.text()).replaceAll('<', '&lt').replaceAll('>', '&gt')}</pre>`;
 }
