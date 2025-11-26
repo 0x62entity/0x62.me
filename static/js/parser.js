@@ -43,7 +43,7 @@ async function parse(command) {
     case "echo":
       let text = command;
       text[0] = '';
-      return text.join(' ');
+      return text.join(' ').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
     default:
       return '<span class="text-red">Command not found</span>';
   }
@@ -51,7 +51,7 @@ async function parse(command) {
 
 async function command() {
   let box = document.getElementById("cmd-input");
-  let cmd = box.value;
+  let cmd = box.value.replaceAll('<', '&lt;').replaceAll('>', '&gt;');
   box.value = "";
   box.setAttribute('disabled', 'true');
   document.getElementById('term-input').style.visibility = 'hidden';
